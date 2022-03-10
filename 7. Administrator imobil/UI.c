@@ -4,6 +4,7 @@
 #include "cheltuieli.h"
 #include "Repo.h"
 #include "Validators.h"
+#include "Service.h"
 
 void Afisare(Lista lista_cheltuieli)
 {
@@ -32,7 +33,25 @@ cheltuiala Citire_UI()
 	c.id = -1;
 	c.suma = -1;
 	strcpy_s(c.tip, 20, type);
-	if (!isType(type))
+	
+	int count_errors = 0;
+	if (!ValidareID(id))
+	{
+		printf("ID incorect!\n");
+		count_errors++;
+	}
+	if (!ValidareSuma(suma))
+	{
+		printf("Suma incorecta!\n");
+		count_errors++;
+	}
+	if (!ValidareTip(type))
+	{
+		printf("Tip incorect!\n");
+		count_errors++;
+	}
+
+	if (count_errors > 0)
 		return c;
 
 	c.id = id;
@@ -60,12 +79,11 @@ void start_console(Lista* lista_cheltuieli)
 		case 0:
 			return;
 			break;
+		
 		// Adaugare 
 		case 1:
 			c = Citire_UI();
-			if (c.id == -1)
-				printf("Tipul introdus este incorect!\n");
-			else 
+			if (c.id != -1)
 				Adauga(c,lista_cheltuieli);
 			break;
 
