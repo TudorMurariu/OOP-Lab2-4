@@ -1,6 +1,4 @@
 #include "Validators.h"
-#include <string.h>
-#include <assert.h>
 
 int isType(char tip[21])
 {

@@ -1,10 +1,4 @@
 #include "UI.h"
-#include <stdio.h>
-#include <string.h>
-#include "cheltuieli.h"
-#include "Repo.h"
-#include "Validators.h"
-#include "Service.h"
 
 void Afisare(Lista lista_cheltuieli)
 {
@@ -66,6 +60,10 @@ cheltuiala Citire_UI(Lista lista_cheltuieli)
 
 void start_console(Lista* lista_cheltuieli)
 {
+	/// <summary>
+	/// Aceasta Funtie este responsabila de aproape tot UI-ul
+	/// </summary>
+	/// <param name="lista_cheltuieli"></param>
 	printf("Scrieti 6 pentru a vedea toate comenzile.\n");
 	while (1)
 	{
@@ -184,9 +182,14 @@ void start_console(Lista* lista_cheltuieli)
 			printf("5 Vizualizare lista de cheltuieli ordonat dupa suma sau tip (crescator/descrescator)\n");
 			printf("6 pentru a vedea toate comenzile\n");
 			printf("7 pentru a vedea toate cheltuielile\n");
+			printf("8 pentru a adauga in lista niste cheltuieli predefinite.\n");
 			break;
 		case 7:
 			Afisare(*lista_cheltuieli);
+			break;
+		case 8:
+			Adauga_predefinite(lista_cheltuieli);
+			printf("Cheltuielile au fost adaugate.\n");
 			break;
 		default:
 			break;

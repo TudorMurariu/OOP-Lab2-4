@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "cheltuieli.h"
 #include "UI.h"
 #include "Lista.h"

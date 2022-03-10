@@ -9,4 +9,5 @@
 int ValidareTip(char tip[21]);
 int ValidareSuma(int suma);
 int ValidareID(int id, Lista l);
+void Adauga_predefinite(Lista* l);
 void test_ValidareID();

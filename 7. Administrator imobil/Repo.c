@@ -1,6 +1,4 @@
 #include "Repo.h"
-#include <string.h>
-#include <assert.h>
 
 void Adauga(cheltuiala c,Lista* l)
 {

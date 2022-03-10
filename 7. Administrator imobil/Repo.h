@@ -1,5 +1,7 @@
 #pragma once
 #include "Lista.h"
+#include <string.h>
+#include <assert.h>
 
 void Adauga(cheltuiala c, Lista* l);
 void Modifica(cheltuiala c, Lista* l);
