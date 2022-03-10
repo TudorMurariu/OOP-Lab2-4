@@ -8,6 +8,10 @@
 
 void Afisare(Lista lista_cheltuieli)
 {
+	/// <summary>
+	/// Functia Afiseaza elementele unei liste si numarul de elemente din lista data.
+	/// </summary>
+	/// <param name="lista_cheltuieli"></param>
 	printf("Numarul de elemente este : %d\n", lista_cheltuieli.len);
 	for (int i = 0; i < lista_cheltuieli.len; i++)
 		printf("%d %d %s\n", lista_cheltuieli.array[i].id, lista_cheltuieli.array[i].suma, lista_cheltuieli.array[i].tip);

@@ -4,6 +4,11 @@
 
 void Adauga(cheltuiala c,Lista* l)
 {
+	/// <summary>
+	/// Functia adauga un element la finalul listei
+	/// </summary>
+	/// <param name="c"></param>
+	/// <param name="l"></param>
 	l->array[l->len].id = c.id;
 	l->array[l->len].suma = c.suma;
 	strcpy_s(l->array[l->len].tip,20,c.tip);
@@ -12,6 +17,11 @@ void Adauga(cheltuiala c,Lista* l)
 
 void Modifica(cheltuiala c, Lista* l)
 {
+	/// <summary>
+	/// Functia modifica un element din lista daca acesta exista
+	/// </summary>
+	/// <param name="c"></param>
+	/// <param name="l"></param>
 	for (int i = 0; i < l->len; i++)
 	{
 		if (l->array[i].id == c.id)
@@ -24,6 +34,11 @@ void Modifica(cheltuiala c, Lista* l)
 
 void Sterge(int id, Lista* l)
 {
+	/// <summary>
+	/// Functia sterge un element din lista daca acesta exista
+	/// </summary>
+	/// <param name="id"></param>
+	/// <param name="l"></param>
 	int ok = 0;
 	for (int i = 0; i < l->len; i++)
 	{
@@ -44,6 +59,10 @@ void Sterge(int id, Lista* l)
 
 Lista Filtrare1(int id,Lista* l)
 {
+	/// <summary>
+	/// Filtram lista data dupa un id dat
+	/// returnneaza o lista in care toate elementele au acelasi id cu id ul dat.
+	/// </summary>
 	Lista new_L;
 	new_L.len = 0;
 
@@ -58,6 +77,12 @@ Lista Filtrare1(int id,Lista* l)
 
 Lista Filtrare2(int suma, Lista* l)
 {
+	/// <summary>
+	/// Filtram dupa suma
+	/// </summary>
+	/// <param name="suma"></param>
+	/// <param name="l"></param>
+	/// <returns>o lista raspuns in care toate elementele au suma egala cu suma data</returns>
 	Lista new_L;
 	new_L.len = 0;
 
@@ -72,6 +97,12 @@ Lista Filtrare2(int suma, Lista* l)
 
 Lista Filtrare3(char tip[21], Lista* l)
 {
+	/// <summary>
+	/// Filtram dupa tip
+	/// </summary>
+	/// <param name="tip"></param>
+	/// <param name="l"></param>
+	/// <returns>o lista raspuns in care toate elementele au tipul dat</returns>
 	Lista new_L;
 	new_L.len = 0;
 
@@ -93,6 +124,14 @@ int cmp1(cheltuiala c1, cheltuiala c2 ,int mod)
 
 Lista Sortare1(Lista l,int mod)
 {
+	/// <summary>
+	/// Sortam lista data dupa suma in modul dat
+	/// mod = 1 => Crescator
+	/// mod = 0 => Descrescator
+	/// </summary>
+	/// <param name="l"></param>
+	/// <param name="mod"></param>
+	/// <returns> Lista sortata </returns>
 	int ok = 1;
 	while (ok)
 	{
@@ -118,6 +157,14 @@ int cmp2(cheltuiala c1, cheltuiala c2, int mod)
 
 Lista Sortare2(Lista l, int mod)
 {
+	/// <summary>
+	/// Sortam lista data dupa tip in mod-ul dat
+	/// mod == 1 => Crescator
+	/// mod == 0 => Descrescator
+	/// </summary>
+	/// <param name="l"></param>
+	/// <param name="mod"></param>
+	/// <returns> Lista sortata </returns>
 	int ok = 1;
 	while (ok)
 	{
