@@ -13,7 +13,7 @@ int isType(char tip[21])
 int not_negative(int x)
 {
 	// tests is the number x is positive
-	return x > 0;
+	return x >= 0;
 }
 
 void test_isType()

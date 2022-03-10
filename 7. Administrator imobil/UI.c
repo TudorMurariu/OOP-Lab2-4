@@ -13,7 +13,7 @@ void Afisare(Lista lista_cheltuieli)
 		printf("%d %d %s\n", lista_cheltuieli.array[i].id, lista_cheltuieli.array[i].suma, lista_cheltuieli.array[i].tip);
 }
 
-cheltuiala Citire_UI()
+cheltuiala Citire_UI(Lista lista_cheltuieli)
 {
 	/*
 	* Citim de la tastatura o cheltuiala si o returnam
@@ -35,7 +35,7 @@ cheltuiala Citire_UI()
 	strcpy_s(c.tip, 20, type);
 	
 	int count_errors = 0;
-	if (!ValidareID(id))
+	if (!ValidareID(id, lista_cheltuieli))
 	{
 		printf("ID incorect!\n");
 		count_errors++;
@@ -82,14 +82,14 @@ void start_console(Lista* lista_cheltuieli)
 		
 		// Adaugare 
 		case 1:
-			c = Citire_UI();
+			c = Citire_UI(*lista_cheltuieli);
 			if (c.id != -1)
 				Adauga(c,lista_cheltuieli);
 			break;
 
 		// Modificare
 		case 2:
-			c = Citire_UI();
+			c = Citire_UI(*lista_cheltuieli);
 			Modifica(c,lista_cheltuieli);
 			break;
 

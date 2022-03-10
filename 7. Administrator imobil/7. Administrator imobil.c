@@ -5,6 +5,7 @@
 #include "Service.h"
 #include "Repo.h"
 #include "Validators.h"
+#include "Service.h"
 
 void tests();
 
@@ -48,4 +49,5 @@ void tests()
     test_Modifica();
     test_Sterge();
     test_not_negative();
+    test_ValidareID();
 }
