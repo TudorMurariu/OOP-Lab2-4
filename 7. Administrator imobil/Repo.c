@@ -232,3 +232,61 @@ void test_Sterge()
 
 	assert(l1.len == 0);
 }
+
+void test_cmp1()
+{
+	cheltuiala c1;
+	c1.id = 5341;
+	c1.suma = 377;
+	strcpy_s(c1.tip, 20, "apa");
+	cheltuiala c2;
+	c2.id = 43521;
+	c2.suma = 8;
+	strcpy_s(c2.tip, 20, "canal");
+	cheltuiala c3;
+	c3.id = 37;
+	c3.suma = 989;
+	strcpy_s(c3.tip, 20, "apa");
+	cheltuiala c4;
+	c4.id = 99905;
+	c4.suma = 12345;
+	strcpy_s(c4.tip, 20, "apa");
+	cheltuiala c5;
+	c5.id = 101777;
+	c5.suma = 8;
+	strcpy_s(c5.tip, 20, "gaz");
+
+	assert(cmp1(c1, c2, 1) == 1);
+	assert(cmp1(c2, c5, 1) == 0);
+	assert(cmp1(c4, c3, 0) == 0);
+	assert(cmp1(c5, c4, 0) == 1);
+}
+
+void test_cmp2()
+{
+	cheltuiala c1;
+	c1.id = 5341;
+	c1.suma = 377;
+	strcpy_s(c1.tip, 20, "apa");
+	cheltuiala c2;
+	c2.id = 43521;
+	c2.suma = 8;
+	strcpy_s(c2.tip, 20, "canal");
+	cheltuiala c3;
+	c3.id = 37;
+	c3.suma = 989;
+	strcpy_s(c3.tip, 20, "apa");
+	cheltuiala c4;
+	c4.id = 99905;
+	c4.suma = 12345;
+	strcpy_s(c4.tip, 20, "apa");
+	cheltuiala c5;
+	c5.id = 101777;
+	c5.suma = 8;
+	strcpy_s(c5.tip, 20, "gaz");
+
+	assert(cmp1(c1, c2, 1) == 1);
+	assert(cmp1(c2, c5, 1) == 0);
+	assert(cmp1(c4, c3, 0) == 0);
+	assert(cmp1(c5, c4, 0) == 1);
+}

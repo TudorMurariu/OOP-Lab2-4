@@ -91,7 +91,22 @@ void start_console(Lista* lista_cheltuieli)
 
 		// Modificare
 		case 2:
-			c = Citire_UI(*lista_cheltuieli);
+			//c = Citire_UI(*lista_cheltuieli);
+
+			printf("Id-ul : ");
+			scanf_s("%d", &id);
+			int suma;
+			printf("suma : ");
+			scanf_s("%d", &suma);
+			printf("tipul : ");
+			char type[21];
+			type[20] = '\0';
+			scanf_s("%s", type, 20);
+
+			c.id = id;
+			c.suma = suma;
+			strcpy_s(c.tip, 20, type);
+
 			Modifica(c,lista_cheltuieli);
 			break;
 

@@ -77,3 +77,23 @@ void test_ValidareID()
 	Adauga(c3, &l1);
 	assert(ValidareID(id, l1) == 0);
 }
+
+void test_ValidareSuma()
+{
+	assert(ValidareSuma(13) == 1);
+	assert(ValidareSuma(0) == 1);
+	assert(ValidareSuma(-32) == 0);
+	assert(ValidareSuma(-1) == 0);
+}
+
+void test_ValidareTip()
+{
+	assert(ValidareTip("apa") == 1);
+	assert(ValidareTip("canal") == 1);
+	assert(ValidareTip("gaz") == 1);
+	assert(ValidareTip("canal") == 1);
+	assert(ValidareTip("dwaefsedfsgrdthf") == 0);
+	assert(ValidareTip("CaNaL") == 0);
+	assert(ValidareTip("apppa") == 0);
+	assert(ValidareTip("a") == 0);
+}

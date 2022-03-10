@@ -11,3 +11,5 @@ int ValidareSuma(int suma);
 int ValidareID(int id, Lista l);
 void Adauga_predefinite(Lista* l);
 void test_ValidareID();
+void test_ValidareSuma();
+void test_ValidareTip();

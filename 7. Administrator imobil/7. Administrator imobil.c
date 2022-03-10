@@ -49,4 +49,8 @@ void tests()
     test_Sterge();
     test_not_negative();
     test_ValidareID();
+    test_ValidareSuma();
+    test_ValidareTip();
+    test_cmp1();
+    test_cmp2();
 }

@@ -16,6 +16,8 @@ Lista Sortare2(Lista l, int mod);
 int cmp1(cheltuiala c1, cheltuiala c2, int mod);
 int cmp2(cheltuiala c1, cheltuiala c2, int mod);
 
+void test_cmp1();
+void test_cmp2();
 void test_Adauga();
 void test_Modifica();
 void test_Sterge();
